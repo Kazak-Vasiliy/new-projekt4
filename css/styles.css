@@ -2,12 +2,12 @@
     --haupt-color: #212121;
     --secod-color: #757575;
     --white-color: #FFFFFF;
-    --white-color-trans: rgba(255, 255, 255, 0.6);
+    --white-color-trans: #ffffff99;
     --akcent-color: #2196f3;
     --footer-background: #2F303A;
     --section-background: #f5f4fa;
-    --border-header-color: rgba(236, 236, 236, 1);
-    --border-card-color: rgba(238, 238, 238, 1);
+    --border-header-color: #ececec;
+    --border-card-color: #eeeeee;
     --akcent-font: 'Raleway',sans-serif;
 }
 body {
@@ -83,11 +83,27 @@ h1,h2,h3,h4,h5,p{
 .contacts-list > .item + .item{
     margin-left: 45px;
 }
+.contakt-link::before{
+    content: '';
+    width: 16px;
+    height: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+.envelope::before {
+    background-image: url(../svg/envelope.svg);
+}
+
+.smartphone::before {
+    background-image: url(../svg/smartphone.svg);
+}
 .nav-link,
 .contakt-link{
     padding-top: 32px;
     padding-bottom: 32px;
-    display: block;
+    display:inline-flex;
 
     font-weight: 500;
     font-size: 14px;
@@ -109,6 +125,18 @@ h1,h2,h3,h4,h5,p{
 .hero-background{
    padding: 200px 0;
    text-align: center;
+
+   background: #C4C4C4;
+   background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: block;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
 }
 .hero-title{
     width: 696px;
@@ -120,7 +148,7 @@ h1,h2,h3,h4,h5,p{
     font-size: 44px;
     letter-spacing: 0.06em;
     line-height: 1.36;
-    color: #2196F3;
+    color:var(--white-color);
     text-transform: uppercase;
 }
 .hero-btn{
@@ -143,6 +171,28 @@ h1,h2,h3,h4,h5,p{
 .properties{
     display: flex;
     justify-content: space-between;
+}
+.properties > .item::before{
+    display: block;
+    content: '';
+    height: 120px;
+    background-color: var(--section-background);
+    background-repeat: no-repeat;
+   background-position: center;
+   margin-bottom: 30px;
+  border-radius: 4px;
+}
+.antenna::before{
+    background-image: url(../svg/antenna.svg);
+}
+.clock::before{
+    background-image: url(../svg/clock.svg);
+}
+.diagram::before{
+    background-image: url(../svg/diagram.svg);
+}
+.astronaut::before{
+    background-image: url(../svg/astronaut.svg);
 }
 .properties > .item{
     width: 270px;
@@ -230,6 +280,81 @@ h1,h2,h3,h4,h5,p{
     letter-spacing: 0.03em;
     line-height: 1.18;
     color: var(--secod-color);
+}
+.icons-list{
+    display: flex;
+    width: 206px;
+    margin: 16px auto 30px;
+}
+.icon-item + .icon-item{
+    margin-left: 10px;
+}
+.icon-item:hover,
+.icon-item:focus{
+    background-color: var(--akcent-color);
+}
+.icon-item {
+    border-radius: 50%;
+}
+.icon-link::before{
+    content: '';
+    display:block; 
+    width: 44px;
+    height: 44px; 
+   border-radius: 50%;
+   outline: 1px solid tomato;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.instagram::before{
+    background-image: url(../svg/instagram.svg);
+}
+.twitter::before{
+    background-image: url(../svg/twitter.svg);
+}
+.facebook::before{
+    background-image: url(../svg/facebook.svg);
+}
+.linkedin::before{
+    background-image: url(../svg/linkedin.svg);
+}
+/* =====================COMPANY================= */
+.company-list{
+    display: flex; 
+}
+.company-item{
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.company-item + .company-item{
+    margin-left: 30px;
+}
+.company-link::before{
+    content: '';
+    display: block;
+    width: 170px;
+    height: 92px;
+    /* outline: 1px solid tomato; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-logo::before{
+    background-image: url(../svg/Logo.svg);
+}
+.img-logo1::before{
+    background-image: url(../svg/Logo1.svg);
+}
+.img-logo2::before{
+    background-image: url(../svg/Logo2.svg);
+}
+.img-logo3::before{
+    background-image: url(../svg/Logo3.svg);
+}
+.img-logo4::before{
+    background-image: url(../svg/Logo4.svg);
+}
+.img-logo5::before{
+    background-image: url(../svg/Logo5.svg);
 }
 /* ==================FOOTER===================== */
 .footer{
