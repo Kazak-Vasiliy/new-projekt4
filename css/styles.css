@@ -197,6 +197,7 @@ h1,h2,h3,h4,h5,p{
 .properties > .item{
     width: 270px;
 }
+.toadd-title,
 .properties-title{
     margin-top: 0;
     margin-bottom: 10px;
@@ -219,7 +220,8 @@ h1,h2,h3,h4,h5,p{
 /* =================SECTION чем мы занимаемся========= */
 .work-list{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 30px;
 }
 .work-img{
     display: block;
@@ -281,21 +283,31 @@ h1,h2,h3,h4,h5,p{
     line-height: 1.18;
     color: var(--secod-color);
 }
+.toadd-list,
 .icons-list{
     display: flex;
     width: 206px;
     margin: 16px auto 30px;
 }
+.toadd-item + .toadd-item,
 .icon-item + .icon-item{
     margin-left: 10px;
 }
+.toadd-item:hover,
+.toadd-item:focus,
 .icon-item:hover,
 .icon-item:focus{
     background-color: var(--akcent-color);
 }
+.toadd-item,
 .icon-item {
     border-radius: 50%;
 }
+.toadd-link,
+.icon-item{
+    display: block;
+}
+.toadd-link::before,
 .icon-link::before{
     content: '';
     display:block; 
@@ -321,20 +333,26 @@ h1,h2,h3,h4,h5,p{
 /* =====================COMPANY================= */
 .company-list{
     display: flex; 
+    justify-content: space-between;
+    
 }
 .company-item{
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
+    width: 170px;
+    height: 92px;
 }
-.company-item + .company-item{
-    margin-left: 30px;
+.company-link{
+    width: 170px;
+    height: 92px;
+    display: inline-block;
 }
 .company-link::before{
     content: '';
-    display: block;
-    width: 170px;
-    height: 92px;
+    display: inline-block;
+    width: 100%;
+    height:100% ;
     /* outline: 1px solid tomato; */
+    border: 1px solid #AFB1B8;
+        border-radius: 4px;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -362,6 +380,16 @@ h1,h2,h3,h4,h5,p{
 
     color: var(--white-color);
     background-color: var(--footer-background);
+}
+.wrapper{
+    display: flex;
+    align-items: baseline;
+}
+.toadd{
+    margin-left: 70px;
+}
+.toadd-list{
+    margin-top: 20px;
 }
 .addres-list{
     margin-top: 20px;
