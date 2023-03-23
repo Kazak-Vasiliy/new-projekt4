@@ -83,7 +83,7 @@ h1,h2,h3,h4,h5,p{
 .contacts-list > .item + .item{
     margin-left: 45px;
 }
-.contakt-link::before{
+/* .contakt-link::before{
     content: '';
     width: 16px;
     height: 12px;
@@ -98,7 +98,7 @@ h1,h2,h3,h4,h5,p{
 
 .smartphone::before {
     background-image: url(../svg/smartphone.svg);
-}
+} */
 .nav-link,
 .contakt-link{
     padding-top: 32px;
@@ -112,6 +112,12 @@ h1,h2,h3,h4,h5,p{
 }
 .contakt-link{
     color: var(--secod-color);
+    display: flex;
+    align-items: center;
+}
+.icon-heder{
+   fill: currentColor;
+   margin-right: 10px;
 }
 .nav-link:hover,
 .nav-link:focus,
@@ -120,6 +126,7 @@ h1,h2,h3,h4,h5,p{
 .addres-list .link:hover,
 .addres-list .link:focus, .activ{
     color: var(--akcent-color);
+    fill: var(--akcent-color);
 }
 /* ==============SECTION HERO============== */
 .hero-background{
@@ -236,13 +243,13 @@ h1,h2,h3,h4,h5,p{
     /* margin: -15px; вариант 3 */
 }
 .team-item{
-    margin-right: 30px; /*вариант 1*/
-    margin-top: 30px;   /*вариант 1*/
+    margin-right: 30px;/* вариант 1 */
+    margin-top: 30px; /*  вариант 1 */
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-
+    width: 270px;
     background-color: var(--white-color);
-    width: calc((100%-90px)/4);/*  вариант 1*/
+    /* flex-basis: calc((100%-90px)/4); вариант 1 */
     /* margin: 15px; вариант 3 */
 
 }
@@ -447,7 +454,7 @@ h1,h2,h3,h4,h5,p{
     flex-wrap: wrap;
 }
 .card-item {
-    width: calc((100%-60px)/3);
+    /* width: calc((100%-60px)/3); */
     margin-right: 30px;
     margin-top: 30px;
 }
