@@ -391,6 +391,10 @@ h1,h2,h3,h4,h5,p{
     margin-right: 30px; /* width: calc((100%-60px)/3); */
     margin-top: 30px;
 }
+.card-item:hover,
+.card-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .card-item:nth-child(3n) {
     margin-right: 0;   /*вариант 1*/
 }
